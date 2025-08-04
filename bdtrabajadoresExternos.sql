@@ -1,24 +1,24 @@
 /**
- *bdtrabajadores.sql
+ *bdtrabajadoresExternos.sql
  *Script de creacción de la base de datos
  */
 
 /** borra la base de datos si existe. */
-drop database if exists BDTrabajadores;
+drop database if exists BDTrabajadoresExternos;
 
 /** Crea la base de datos. */
-create database BDTrabajadores;
+create database BDTrabajadoresExternos;
 
 /** Crea el usuario para acceder a la base de datos. */
-create or replace user 'UBDTrabajadores'@'localhost'
+create or replace user 'UBDTrabajadoresExternos'@'localhost'
         identified by 'Lo-1234-lo';
 
 /** concede privilegios al usuario para acceder a la base de datos. */
-grant select, insert, update, delete on UBDTrabajadores.*
-    to 'UBDTrabajadores'@'localhost';
+grant select, insert, update, delete on UBDTrabajadoresExternos.*
+    to 'UBDTrabajadoresExternos'@'localhost';
 
 /** Selecciona la base de datos. */
-use BDTrabajadores;
+use BDTrabajadoresExternos;
 
 /** Crea las tablas. */
 CREATE TABLE TipoSexo (
